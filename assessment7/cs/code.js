@@ -1,22 +1,23 @@
-function writeCode() {
+// Runtime complexity o(n^2)
 
-    let arrayOfNum=[]
-    let diff
-    for (let i=0; i<writeCode.length; +ii) {
-        diff=[]- arr[i]
-        if(arrayOfNum[diff]) {
+function writeCode(arr) {
+
+    for (let i=0; i<arr.length; i++) {
+        for (let k=0; k<arr.length; k++){
+          if (i !== k && arr[i]-arr[k] ===0) {
             return true
-
-        } else {
-arrayOfNum[arr[i]]=true
+          }
         }
-    }
+         }
 
 
     return false
 }
-console.log(writeCode('[]'))
+console.log(writeCode([0,1,2,3,4,5]))
+console.log(writeCode([0,1,2,2,4,2]))
 
+
+// 2 Runtime complexity o(n)
 function hasUniqueChars(arr) {
     let uniqueChars = new Set([])
     for (let i = 0; i < arr.length; i++) {
@@ -29,7 +30,7 @@ function hasUniqueChars(arr) {
   console.log(hasUniqueChars('Monday'))
 
 
-
+// 3 runtime complexity o(n)
   function isPangram(string){
     let strArr = string.toLowerCase();
     let alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('');
@@ -45,23 +46,16 @@ function hasUniqueChars(arr) {
   console.log(isPangram("I like cats, but not mice"))
 
 
-  function longestWord(string) {
+  
 
+// 4 runtime complexity o(n)
+  function longestWord(arr) {
+  let longestWordLength=0
+  for (let i=0; i<arr.length; i++){
+    if(arr[i].length>longestWordLength) {
+      longestWordLength=arr[i].length
+    }
   }
-
-
-  function longestWord(string) {
-    var str = string.split(" ");
-    var longest = 0;
-    var word = null;
-
-    str.forEach(function(str) {
-        if (longest < str.length) {
-            longest = str.length;
-            word = str;
-        }
-    });
-
-return word;
+  return longestWordLength
 }
-console.log(longestWord('Hi hello'))
+console.log(longestWord(["Hi" ,"hello"]))
