@@ -1,0 +1,26 @@
+Runtime.js
+ExtraLargeArray  Results for the extraLargeArray
+insert 994.728955 ms
+append 9.725859 ms
+
+
+LargeArray    Results for the largeArray
+insert 7.990726 ms
+append 718.071 μs
+
+
+MediumArray  Results for the mediumArray
+insert 350.785 μs
+append 221.077 μs
+
+
+
+SmallArray   Results for the smallArray
+insert 51.809 μs
+append 108.015 μs
+
+TinyArray    Results for the tinyArray
+insert 43.393 μs
+append 141.899 μs
+
+We can see for the smaller the array the insert function performs better. As the array gets bigger the append function scaling is more linear. As the bigger array size increases the insert function takes longer runtime. This is why we can see that the difference between the 2 (smallArray and tinyArray) is not that significant.
